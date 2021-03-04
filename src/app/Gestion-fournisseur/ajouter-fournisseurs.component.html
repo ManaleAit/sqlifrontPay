@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card  ">
                     <div class="card-header colorStyleCadre marleft ">
-                        <h4 class="card-title  text-white ">Ajouter un client </h4>
+                        <h4 class="card-title  text-white ">Ajouter un Fournisseur </h4>
                     </div>
                     <div class="card-body ">
                         <form [formGroup]="FormulaireControl" (ngSubmit)="onSubmit()">
@@ -31,7 +31,7 @@
 
 
                             <div class="input-group  mb-3">
-                                <input type="text" class="form-control" id="domaine" placeholder="Adresse*"
+                                <input type="text" class="form-control" id="domaine" placeholder="Domaine*"
                                     formControlName="domaine">
 
                                 <div *ngIf="send &&  domaine.invalid" class="text-danger">
@@ -43,7 +43,7 @@
                           
                             <br><br>
                             <button class="btn colorStyle w-100" type="submit" id="submitAjout" (click)="SendChange()"><span>Ajouter un
-                                    client</span></button>
+                                    Fournisseur</span></button>
                         </form>
                     </div>
                 </div>

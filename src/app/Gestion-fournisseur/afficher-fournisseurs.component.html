@@ -1,3 +1,5 @@
+
+
 <app-navbar></app-navbar>
 <div class="main-content">
     <div class="container-fluid">
@@ -24,12 +26,12 @@
                                     <th scope="col" class="font-weight-bold">domaine</th>
                                     <th scope="col" class="font-weight-bold ">Ajouter un fournisseur
                                         <i class="fa fa-plus-circle fa-lg  align-middle" aria-hidden="true"
-                                            aria-hidden="true" id="ajout" routerLink="/ajoutfournisseur"></i>
+                                            aria-hidden="true" id="ajout" routerLink="/ajoutFournisseur"></i>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor='let o of fournisseurs'>
+                                <tr *ngFor='let o of Fournisseurs'>
 
                                     <td>{{o.nom}}</td>
                                     <td>{{o.prenom}}</td>
@@ -41,9 +43,7 @@
                                         <a class="btn bg-light px-1 p-1 ml-1"><i class="fa fa-trash fa-2x colorText"
                                                 style="cursor: pointer;" id="delete" (click)="onSelectDelete(o);Delete.show()"
                                                 data-toggle="modal" data-target="#modalDelete"></i></a>
-                                        <a class="btn bg-light px-1 p-1 ml-1  colorText"><i class="fa fa-money fa-2x" 
-                                                    style="cursor: pointer;" (click)="onSubmitPay(o);Details.show();"
-                                                    data-toggle="modal"></i></a>
+                                        
 
                                     </td>
                                 </tr>
@@ -129,54 +129,9 @@
                     </div>
                 </div>
             </div>
-            <div bsModal #Details="bs-modal" class="modal fade" tabindex="-1" role="dialog"
-            aria-labelledby="AddLabel" aria-hidden="true">
-            <div class="modal-dialog =" role="document">
-                <div class="modal-content">
-                    <div class="modal-header ">
-                        <div class="modal-body horizontal-scrollable" style="height:260px;">
-                            <form [formGroup]="FormulaireCount" (ngSubmit)="pay()">
-                                <h4 class="colorText">Alimentation du compte</h4>
-                                <hr>
-                          
-
-                                <div class="input-group  mb-3">
-                                    <label class="form-control">Numero de compte*</label>
-                                   
-                                    <input type="text" class="form-control" placeholder="numero de l'acompte*"
-                                        formControlName="id">
-
-                                </div>
-
-                                <div class="input-group  mb-3">
-                                   
-
-                                    <label class="form-control">Amount*</label>
-                                    <input type="text" class="form-control" placeholder="Montant*" formControlName="amount2">
-                                    <label class="form-control">DH</label>
-                                </div>
-
-
-
-
-                                <br><br>
-                                <button class="btn colorStyleTable w-100" type="submit"><span>Envoyer</span></button>
-                            </form>
-
-                        </div>
-
-                        <button type="button" class="close" (click)="Details.hide()" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    
-                    <div class="modal-footer">
-                        <button type="button" class="btn styColor" 
-                            (click)="Details.hide()">Fermer</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+           
+           
+                  
             <div bsModal #Delete="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="AddLabel"
                 aria-hidden="true">
                 <div class="modal-dialog colorStyleTable" role="document">

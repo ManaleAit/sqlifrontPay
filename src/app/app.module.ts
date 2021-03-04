@@ -17,7 +17,8 @@ import { StorageServiceModule } from 'ngx-webstorage-service';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { NavbarComponent } from './Navbar/navbar.component';
 import { AfficherFournisseursComponent } from './Gestion-fournisseur/afficher-fournisseurs.component';
-import { AjouterFournisseurComponent } from './Gestion-fournisseur/ajouter.fournisseurs.component';
+import { AjouterFournisseurComponent } from './Gestion-fournisseur/ajouter-fournisseurs.component';
+//import { AjouterFournisseurComponent } from './Gestion-fournisseur/ajouter.fournisseurs.component';
 //import { TokenInterceptor } from './Services/token-interceptor';
 @NgModule({
   imports: [
