@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<div class="stylediv"></div>
+<div class="main-content marleftCadre">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card  ">
+                    <div class="card-header colorStyleCadre marleft ">
+                        <h4 class="card-title  text-white ">Ajouter un client </h4>
+                    </div>
+                    <div class="card-body ">
+                        <form [formGroup]="FormulaireControl" (ngSubmit)="onSubmit()">
+                            <h4 class="styleh4">Les informations personelles </h4>
+                            <hr>
+                            <div class="input-group  mb-3">
+
+                                <input type="text" class="form-control" id="nom" placeholder="Prénom*"
+                                    formControlName="nom">
+
+                                <div *ngIf=" send &&  nom.invalid" class="text-danger">
+                                   Prénom est obligatoire*
+                                </div>
+                                <input type="text" class="form-control" id="prenom" placeholder="Nom*"
+                                    formControlName="prenom">
+
+                                <div *ngIf="send &&  prenom.invalid" class="text-danger">
+                                    Nom est obligatoire*
+                                </div>
+                            </div>
+
+
+
+                            <div class="input-group  mb-3">
+                                <input type="text" class="form-control" id="domaine" placeholder="Adresse*"
+                                    formControlName="domaine">
+
+                                <div *ngIf="send &&  domaine.invalid" class="text-danger">
+                                    domainee est obligatoire*
+                                </div>
+                                
+                            </div>
+
+                          
+                            <br><br>
+                            <button class="btn colorStyle w-100" type="submit" id="submitAjout" (click)="SendChange()"><span>Ajouter un
+                                    client</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
